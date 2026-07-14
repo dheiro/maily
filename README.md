@@ -2,6 +2,8 @@
 
 A self-hosted disposable email service built on Cloudflare Workers, D1, and React. Catch-all inboxes for any domain you control, with a clean admin panel to manage domains, read incoming mail, and rotate credentials.
 
+![Maily Inbox Screenshot](./screenshots/inbox.png)
+
 ## Features
 
 - **Multi-domain catch-all** — add any domain you own; emails to `anything@yourdomain.com` are captured
