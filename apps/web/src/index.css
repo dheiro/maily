@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #e5e7eb;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #d1d5db;
+}
+.truncate-1-lines {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.email-row:hover {
+    box-shadow: inset 1px 0 0 #f97316, inset -1px 0 0 #e5e7eb, 0 1px 4px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+.dark .email-row:hover {
+    box-shadow: inset 1px 0 0 #f97316, inset -1px 0 0 #1f2937, 0 1px 4px rgba(0,0,0,0.3);
+}

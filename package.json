@@ -1,0 +1,46 @@
+{
+  "name": "maily",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:ui": "vite --config apps/web/vite.config.ts",
+    "dev:api": "wrangler dev",
+    "deploy:api": "wrangler deploy",
+    "build": "vite build --config apps/web/vite.config.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@dnd-kit/core": "^6.3.1",
+    "@dnd-kit/sortable": "^10.0.0",
+    "@dnd-kit/utilities": "^3.2.2",
+    "@headlessui/react": "^2.2.10",
+    "@tanstack/react-query": "^5.101.2",
+    "dompurify": "^3.4.12",
+    "hono": "^4.12.29",
+    "lucide-react": "^1.24.0",
+    "postal-mime": "^2.7.5",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-router-dom": "^7.18.1"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260712.1",
+    "@types/dompurify": "^3.0.5",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "autoprefixer": "^10.5.2",
+    "postcss": "^8.5.17",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^7.0.2",
+    "vite": "^8.1.4",
+    "wrangler": "^4.110.0"
+  }
+}
