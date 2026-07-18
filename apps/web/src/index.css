@@ -16,6 +16,16 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #d1d5db;
 }
+
+/* Hide scrollbar but keep scrollable */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 .truncate-1-lines {
     display: -webkit-box;
     -webkit-line-clamp: 1;

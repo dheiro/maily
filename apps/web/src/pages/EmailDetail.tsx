@@ -28,8 +28,8 @@ export default function EmailDetail() {
   const sanitizedHtml = DOMPurify.sanitize(email.body_html || email.body_text || 'No content')
 
   return (
-    <div className="flex-1 overflow-hidden flex flex-col bg-gray-50/50 dark:bg-gray-950 px-4 md:px-6 lg:px-8 pb-4 md:pb-6 pt-0">
-      <div className="flex flex-col flex-1 space-y-6 pt-4">
+    <div className="flex-1 min-h-0 overflow-hidden flex flex-col bg-gray-50/50 dark:bg-gray-950 px-4 md:px-6 lg:px-8 pb-4 md:pb-6 pt-0">
+      <div className="flex flex-col flex-1 min-h-0 space-y-6 pt-4">
 
         {/* Header */}
         <div className="flex items-center gap-2 mb-2">
@@ -39,7 +39,7 @@ export default function EmailDetail() {
           <h1 className="text-2xl font-bold text-gray-900 dark:text-white leading-8">Inbox</h1>
         </div>
 
-        <div className="bg-white dark:bg-gray-900/40 border border-gray-200 dark:border-gray-800 rounded-xl shadow-sm flex flex-col h-full overflow-hidden flex-1">
+        <div className="bg-white dark:bg-gray-900/40 border border-gray-200 dark:border-gray-800 rounded-xl shadow-sm flex flex-col flex-1 min-h-0 overflow-hidden">
 
           {/* Toolbar / Card Header */}
           <div className="h-14 px-2 md:px-4 border-b border-gray-100 dark:border-gray-800 flex items-center justify-between bg-white dark:bg-gray-900/60 flex-shrink-0">
@@ -87,7 +87,7 @@ export default function EmailDetail() {
           </div>
 
           {/* Email Body */}
-          <div className="flex-1 overflow-y-auto p-4 md:p-6 bg-white dark:bg-transparent">
+          <div className="flex-1 min-h-0 overflow-y-auto scrollbar-hide p-4 md:p-6 bg-white dark:bg-transparent">
             <div
               className="prose prose-sm md:prose-base max-w-none dark:prose-invert prose-a:text-orange-600 hover:prose-a:text-orange-700 dark:prose-a:text-orange-500 dark:hover:prose-a:text-orange-400"
               dangerouslySetInnerHTML={{ __html: sanitizedHtml }}
