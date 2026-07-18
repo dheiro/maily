@@ -80,7 +80,18 @@ export default function EmailDetail() {
                   </div>
                 </div>
               </div>
-              <div className="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap pl-4">
+              <div
+                className="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap pl-4 cursor-default"
+                title={new Date(email.received_at).toLocaleString('en', {
+                  weekday: 'short',
+                  year: 'numeric',
+                  month: 'short',
+                  day: 'numeric',
+                  hour: 'numeric',
+                  minute: '2-digit',
+                  hour12: true,
+                })}
+              >
                 {formatEmailDate(email.received_at)}
               </div>
             </div>
